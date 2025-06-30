@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="iku_tags_list">
+      <field name="name">iku_tags.list</field>
+      <field name="model">iku_tags</field>
+      <field name="arch" type="xml">
+        <list editable="bottom">
+          <field name="name"/>
+          <field name="color" widget="color_picker"/>
+        </list>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="iku_tags_form_view">
+      <field name="name">iku_tags.form.view</field>
+      <field name="model">iku_tags</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="color" widget="color"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!--    <record model="ir.ui.view" id="iku_milestone_search_view">-->
+<!--      <field name="name">iku.milestone.search.view</field>-->
+<!--      <field name="model">iku_milestone</field>-->
+<!--      <field name="arch" type="xml">-->
+<!--        <search>-->
+<!--        </search>-->
+<!--      </field>-->
+<!--    </record>-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="iku_tags_action_window">
+      <field name="name">Tags</field>
+      <field name="res_model">iku_tags</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem name="Configuration" id="iku_tags_menu" parent="iku_proje.menu_root" />
+    <menuitem name="Tags" id="iku_tags_menu_action" parent="iku_tags_menu" action="iku_tags_action_window"/>
+  </data>
+</odoo>
+
+

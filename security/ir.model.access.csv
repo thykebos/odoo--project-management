@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_iku_proje,iku_proje,model_iku_proje,base.group_user,1,1,1,1
+access_iku_tasks,iku_tasks,model_iku_tasks,base.group_user,1,1,1,1
+access_iku_milestone,iku_milestone,model_iku_milestone,base.group_user,1,1,1,1
+access_iku_tags,iku_tags,model_iku_tags,base.group_user,1,1,1,1
+access_iku_subtasks,iku_subtasks,model_iku_subtasks,base.group_user,1,1,1,1

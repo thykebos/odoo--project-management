@@ -1,0 +1,52 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="iku_milestone_list">
+      <field name="name">iku_milestone.list</field>
+      <field name="model">iku_milestone</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="deadline"/>
+          <field name="reached"/>
+          <field name="project_type"/>
+        </list>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="iku_milestone_form_view">
+      <field name="name">iku_milestone.form.view</field>
+      <field name="model">iku_milestone</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="deadline"/>
+              <field name="reached"/>
+              <field name="project_type"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!--    <record model="ir.ui.view" id="iku_milestone_search_view">-->
+<!--      <field name="name">iku.milestone.search.view</field>-->
+<!--      <field name="model">iku_milestone</field>-->
+<!--      <field name="arch" type="xml">-->
+<!--        <search>-->
+<!--        </search>-->
+<!--      </field>-->
+<!--    </record>-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="iku_milestone_action_window">
+      <field name="name">Milestone</field>
+      <field name="res_model">iku_milestone</field>
+      <field name="view_mode">list,form</field>
+    </record>
+  </data>
+</odoo>
